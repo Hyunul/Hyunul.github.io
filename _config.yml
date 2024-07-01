@@ -228,20 +228,19 @@ jekyll-archives:
 
 # comments
 comments:
-  active: giscus
+  provider: giscus
   disqus:
-    shortname:
+    shortname: ...
 
   utterances:
-    repo:
-    issue_term:
+    repo: ...
 
   giscus:
     repo: hyunul/hyunul.github.io
     repo_id: R_kgDOMQtKSw
     category: General
     category_id: DIC_kwDOMQtKS84CghA6
-    lang: ko
+    # lang: ko
 
 # <script src="https://giscus.app/client.js"
 #         data-repo="hyunul/hyunul.github.io"
