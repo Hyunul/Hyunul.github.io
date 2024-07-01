@@ -237,17 +237,17 @@ comments:
     issue_term:
 
   giscus:
-    repo: Hyunul/Hyunul.github.io
+    repo: hyunul/hyunul.github.io
     repo_id: R_kgDOMQtKSw
-    category: Announcements
-    category_id: DIC_kwDOMQtKS84CghA5
+    category: General
+    category_id: DIC_kwDOMQtKS84CghA6
     lang: ko
 
 # <script src="https://giscus.app/client.js"
-#         data-repo="Hyunul/Hyunul.github.io"
+#         data-repo="hyunul/hyunul.github.io"
 #         data-repo-id="R_kgDOMQtKSw"
-#         data-category="Announcements"
-#         data-category-id="DIC_kwDOMQtKS84CghA5"
+#         data-category="General"
+#         data-category-id="DIC_kwDOMQtKS84CghA6"
 #         data-mapping="pathname"
 #         data-strict="0"
 #         data-reactions-enabled="1"
