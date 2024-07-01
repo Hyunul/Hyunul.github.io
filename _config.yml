@@ -229,17 +229,19 @@ jekyll-archives:
 # comments
 comments:
   active: giscus
-  # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
   disqus:
-    shortname: ...
+    shortname:
+
   utterances:
-    repo: ...
+    repo:
+    issue_term:
+
   giscus:
     repo: Hyunul/Hyunul.github.io
     repo_id: R_kgDOMQtKSw
     category: Announcements
     category_id: DIC_kwDOMQtKS84CghA5
+    lang: ko
 
 # <script src="https://giscus.app/client.js"
 #         data-repo="Hyunul/Hyunul.github.io"
