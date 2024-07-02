@@ -31,7 +31,7 @@ ex) load_template.code-snippets
 예시로 나의 템플릿 코드를 보여주겠다.
 
 <div align="left">
-    <img src="./assets/images/Code_Snippets_01.png">  
+    <img src="./assets/images/Code_Snippets_01.png" alt="Code_Snippets_01">  
 </div>
 
 이건 진짜 꿀팁인데 "date"에 해당되는 코드는 템플릿 코드를 실행한 시점의 시간을 "YYYY-MM-DD HH:MM:SS +09:00" 포맷으로 바꿔서 작성해준다... 안쓸 수가 없겠지?
@@ -41,12 +41,12 @@ ex) load_template.code-snippets
 
 `ctrl + 스페이스 바` 를 누르면 내가 생성한 단축어가 나오게 된다.
 <div align="left">
-    <img src="./assets/images/Code_Snippets_02.png">  
+    <img src="./assets/images/Code_Snippets_02.png" alt="Code_Snippets_02">  
 </div>
 
 그리고 엔터를 누르면?  
 <div align="left">
-    <img src="./assets/images/Code_Snippets_03.png">  
+    <img src="./assets/images/Code_Snippets_03.png" alt="Code_Snippets_03">  
 </div>
 성공적으로 실행되는 것을 확인할 수 있었다.
 
