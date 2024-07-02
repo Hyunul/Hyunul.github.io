@@ -15,7 +15,7 @@ Jekyll 기반의 블로그 포스팅을 할 때 반드시 적어주어야 하는
 
 시작해보자.
 
-# 설정 방법
+# 🛠 설정 방법 🛠
 > 먼저 나는 여러 장소에서 Github 기반의 블로그를 운영하기에 하나의 VSC에 전역 설정을 하지 않는다.
 > 따라서 Github에 설정 파일을 함께 올릴 생각으로 처음부터 프로젝트 단위로 설정을 시작하였다.
 
@@ -31,7 +31,7 @@ ex) load_template.code-snippets
 예시로 나의 템플릿 코드를 보여주겠다.
 
 <div align="left">
-    <img src="./assets/images/Code_Snippets_01.png" alt="Code_Snippets_01">  
+    <img src="./assets/images/Code_Snippets/Code_Snippets_01.png" alt="Code_Snippets_01">  
 </div>
 
 이건 진짜 꿀팁인데 "date"에 해당되는 코드는 템플릿 코드를 실행한 시점의 시간을 "YYYY-MM-DD HH:MM:SS +09:00" 포맷으로 바꿔서 작성해준다... 안쓸 수가 없겠지?
@@ -41,12 +41,12 @@ ex) load_template.code-snippets
 
 `ctrl + 스페이스 바` 를 누르면 내가 생성한 단축어가 나오게 된다.
 <div align="left">
-    <img src="./assets/images/Code_Snippets_02.png" alt="Code_Snippets_02">  
+    <img src="./assets/images/Code_Snippets/Code_Snippets_02.png" alt="Code_Snippets_02">  
 </div>
 
 그리고 엔터를 누르면?  
 <div align="left">
-    <img src="./assets/images/Code_Snippets_03.png" alt="Code_Snippets_03">  
+    <img src="./assets/images/Code_Snippets/Code_Snippets_03.png" alt="Code_Snippets_03">  
 </div>
 성공적으로 실행되는 것을 확인할 수 있었다.
 
