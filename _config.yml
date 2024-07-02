@@ -58,6 +58,7 @@ webmaster_verifications:
 
 # Web Analytics Settings
 analytics:
+  provider: "google-gtag"
   google:
     id: 'G-LJT8J2TZNL'
   goatcounter:
