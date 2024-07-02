@@ -2,7 +2,7 @@
 title: (LeetHub) LeetCode의 문제를 내 Repo에 자동으로 커밋되도록 만들어보자.
 date: 2024-07-02 17:47:14 +09:00
 categories: [Tech, Github]
-tag: [Tech]
+tag: [Github]
 ---
 
 "코테 준비해야지..." 대학생때부터 가져온 생각이다..  
