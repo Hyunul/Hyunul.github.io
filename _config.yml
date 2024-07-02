@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: 'G-LJT8J2TZNL'
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -241,6 +241,3 @@ comments:
     category: General
     category_id: DIC_kwDOMQtKS84CghA6
     # lang: ko
-
-# Google Analytics
-google_analytics: 'G-LJT8J2TZNL'
