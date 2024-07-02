@@ -242,18 +242,5 @@ comments:
     category_id: DIC_kwDOMQtKS84CghA6
     # lang: ko
 
-# <script src="https://giscus.app/client.js"
-#         data-repo="hyunul/hyunul.github.io"
-#         data-repo-id="R_kgDOMQtKSw"
-#         data-category="General"
-#         data-category-id="DIC_kwDOMQtKS84CghA6"
-#         data-mapping="pathname"
-#         data-strict="0"
-#         data-reactions-enabled="1"
-#         data-emit-metadata="0"
-#         data-input-position="bottom"
-#         data-theme="preferred_color_scheme"
-#         data-lang="ko"
-#         crossorigin="anonymous"
-#         async>
-# </script>
+# Google Analytics
+google_analytics: 'G-LJT8J2TZNL'
