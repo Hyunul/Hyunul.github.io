@@ -9,7 +9,6 @@ tag: [Tech]
 
 # 찾게 된 계기
 
-<!-- ![Code_Snippets_01](./assets/images/Code_Snippets_01.png) -->
 Jekyll 기반의 블로그 포스팅을 할 때 반드시 적어주어야 하는 사항들이 있다.. (title, date, categories, tag 등등)
 그런데 이를 템플릿화시킨다면? 포스팅 시간이 획기적으로 줄어들 것이다.
 
@@ -34,7 +33,7 @@ ex) load_template.code-snippets
     <img src="./assets/images/Code_Snippets/Code_Snippets_01.png" alt="Code_Snippets_01">  
 </div>
 
-이건 진짜 꿀팁인데 "date"에 해당되는 코드는 템플릿 코드를 실행한 시점의 시간을 "YYYY-MM-DD HH:MM:SS +09:00" 포맷으로 바꿔서 작성해준다... 안쓸 수가 없겠지?
+이건 진짜 꿀팁인데 `date`에 해당되는 코드는 템플릿 코드를 실행한 시점의 시간을 `YYYY-MM-DD HH:MM:SS +09:00` 포맷으로 바꿔서 작성해준다... 안쓸 수가 없겠지?
 
 ## 4. 사용 방법
 내 VSC에 문제가 있는 것인지는 모르겠지만... 가장 첫 문자를 쓰면 보통 단축어가 나오는데 현재 내가 작성한 시점에서는 나오지 않아 다른 방법으로 대체했다.
