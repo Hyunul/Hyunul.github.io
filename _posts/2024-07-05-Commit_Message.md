@@ -51,5 +51,5 @@ ex) feat: Add_register_api
 어떠한 이슈에 대한 commit인지 issue number를 포함.
 
 # __References__
-> [[Git] Commit message 규칙](https://velog.io/@jiheon/Git-Commit-message-%EA%B7%9C%EC%B9%99)
+> [[Git] Commit message 규칙](https://velog.io/@jiheon/Git-Commit-message-%EA%B7%9C%EC%B9%99)  
 > [[Git] 좋은 커밋 메세지 작성하기위한 규칙들](https://beomseok95.tistory.com/328)

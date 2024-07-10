@@ -1,8 +1,8 @@
 ---
-title: (VSC) Code Snippets를 사용하여 default 템플릿을 만들어보자.
+title: (Blog) Code Snippets를 사용하여 default 템플릿을 만들어보자.
 date: 2024-07-02 10:20:57 +09:00
-categories: [Tech, VSC]
-tag: [VSC]
+categories: [Tech, Blog]
+tag: [Blog]
 ---
 
 > 우리는 이 글을 읽음으로써 더 이상 Jekyll 기반의 블로그 포스팅을 할 때 시간을 낭비하지 않을 수 있게 될 것이다.
