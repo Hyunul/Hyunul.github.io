@@ -1,5 +1,5 @@
 ---
-title: (Git) LeetCode의 문제를 내 Repo에 자동으로 커밋되도록 만들어보자.
+title: "[Git] LeetCode의 문제를 내 Repo에 자동으로 커밋되도록 만들어보자."
 date: 2024-07-02 17:47:14 +09:00
 categories: [Tech, Git]
 tag: [Git]
@@ -7,11 +7,14 @@ tag: [Git]
 
 "코테 준비해야지..." 대학생때부터 가져온 생각이다..  
 이전에 코테 준비할 때에는 백준으로 많이 준비했었는데 요즘은 주변에서 LeetCode를 선호하는 추세라고 많이 들려온다.  
-그래서 "LeetHub"를 준비했다. 이 친구는 LeetCode의 문제를 성공적으로 풀어낸다면 나의 깃헙 Repo에 풀이를 커밋해준다. 완전 럭키비키하자너..  
+그래서 "LeetHub"를 준비했다. 이 친구는 LeetCode의 문제를 성공적으로 풀어낸다면 나의 깃헙 Repo에 풀이를 커밋해준다. 완전 럭키비키하자너..
 
-# __🛠 설정 방법 🛠__
-## __1. 확장 프로그램 추가__
+# **🛠 설정 방법 🛠**
+
+## **1. 확장 프로그램 추가**
+
 먼저 크롬 웹 스토어로 가서 LeetHub V3를 추가해준다.
+
 <div align="left">
     <img src="./assets/images/LeetHub/LeetHub_01.png" alt="LeetHub_01">  
 </div>
@@ -22,14 +25,16 @@ tag: [Git]
     <img src="./assets/images/LeetHub/LeetHub_02.png" alt="LeetHub_02">  
 </div>
 
-## __2. Github 인증__
+## **2. Github 인증**
+
 한번 더 클릭하면 다음 창으로 넘어가는데 "Authenticate"를 눌러 진행해주자.
 
 <div align="left">
     <img src="./assets/images/LeetHub/LeetHub_03.png" alt="LeetHub_03">  
 </div>
 
-## __3. Github Repo 설정__
+## **3. Github Repo 설정**
+
 로그인 완료 시 다음과 같은 창이 나타나는데, 첫 칸은 "Create a new Private Reppository" (새로운 Private Repo를 만들어서 그 곳에 커밋하겠다는 의미)를 선택해주고, 두번째 칸은 본인이 원하는 Repo 명을 적어주고 "Get Started"를 누르면 설정 끝이다.
 
 <div align="left">
