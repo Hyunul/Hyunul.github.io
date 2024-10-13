@@ -5,14 +5,12 @@ categories: [Tech, Git]
 tag: [Git]
 ---
 
-# **찾게 된 계기**
+## **찾게 된 계기**
 
 나는 항상 개인 프로젝트의 Commit Message를 대충 지어오곤 했다. 그러던 중 "나중에 회사에 들어가게 되면 많은 양의 Commit Message를 남기게 될텐데.. 처음부터 정리가 안된다면 나중에 감당이 가능할까?"라는 마음에서 찾아보기 시작했다.  
 이제 흔히 말하는 "좋은 커밋 메세지"를 작성하는 방법을 알아보자.
 
-# **사용 목적**
-
-# **구조**
+## **구조**
 
 Commit Message는 다음과 같은 구조로 이루어져 있다.
 
@@ -21,7 +19,7 @@ Commit Message는 다음과 같은 구조로 이루어져 있다.
 > - Resolves: #issueNo, ...(해결한 이슈, 생략 가능)
 > - See also: #issueNo, ...(참고 이슈, 생략 가능)
 
-# **기본 규칙**
+## **기본 규칙**
 
 - 제목과 본문을 **빈 행으로 구분**
 - 제목은 영문 기준 **50글자 이하**
@@ -31,7 +29,7 @@ Commit Message는 다음과 같은 구조로 이루어져 있다.
 - 본문의 각 행은 영문 기준 **72글자 이하**
 - 어떻게보다는 **무엇과 왜**
 
-# **Type**
+## **Type**
 
 > - feat: 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
 > - fix: 기능에 대한 버그수정
@@ -44,21 +42,21 @@ Commit Message는 다음과 같은 구조로 이루어져 있다.
 > - test: 테스트 코드 추가/수정
 > - release: 버전 릴리즈
 
-# **Subject**
+## **Subject**
 
 Type과 함께 헤더를 구성.  
 ex) feat: Add_register_api
 
-# **Body**
+## **Body**
 
 헤더로 표현이 가능하다면 생략 가능.  
 아닌 경우에는 자세한 내용을 함께 적어 본문 구성.
 
-# **Footer**
+## **Footer**
 
 어떠한 이슈에 대한 commit인지 issue number를 포함.
 
-# **References**
+## **References**
 
 > [[Git] Commit message 규칙](https://velog.io/@jiheon/Git-Commit-message-%EA%B7%9C%EC%B9%99)  
 > [[Git] 좋은 커밋 메세지 작성하기위한 규칙들](https://beomseok95.tistory.com/328)

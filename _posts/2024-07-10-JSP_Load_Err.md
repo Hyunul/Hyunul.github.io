@@ -5,13 +5,13 @@ categories: [Tech, Web]
 tag: [Spring]
 ---
 
-# 문제상황
+## **문제상황**
 
 Spring Boot와 JSP, JSTL 기반의 웹 프로젝트를 구성하다가 Spring이 WEB-INF에 있는 JSP 파일을 불러오지 못함.
 
-# 해결 과정
+## **해결 과정**
 
-## 의존성 설정
+### **의존성 설정**
 
 Spring Boot에서는 기본적으로 JSP를 지원하지 않으므로 다음의 의존성을 추가해줘야 함.
 
@@ -22,7 +22,7 @@ implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
 implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
 ```
 
-## application.properties 수정
+### **application.properties 수정**
 
 WEB-INF 디렉토리를 사용하기 위해 `prefix`와 `suffix`를 작성해준다.
 
@@ -43,6 +43,6 @@ server.servlet.jsp.init-parameters.development=true
     <img src="./assets/images/JSP_Load_Err/JSP_Load_Err_01.png" alt="JSP_Load_Err_01">  
 </div>
 
-# Reference
+## **Reference**
 
 > [[Spring] Spring Boot 3에서 JSP 설정방법](https://velog.io/@rhkdbtj/Spring-Spring-boot-3%EC%97%90%EC%84%9C-jsp-%EC%84%A4%EC%A0%95%EB%B0%A9%EB%B2%95)

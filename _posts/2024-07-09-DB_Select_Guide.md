@@ -5,7 +5,7 @@ categories: [Tech, Web]
 tag: [DB]
 ---
 
-# 서론
+## **서론**
 
 요즘 DB가 엄청 많아지는 바람에 어떤 프로젝트에는 어떤 DB가 잘 맞는지 잘 모르는 경향이 있다. 따라서 오늘은 DB 선택 가이드에 대해서 포스팅해보겠다.
 
@@ -15,14 +15,14 @@ tag: [DB]
 
 ---
 
-# DB의 종류
+## **DB의 종류**
 
 DB는 크게 2종류로 나눌 수 있다.
 
 > 1. RDBMS (Relational Database Magement System)
 > 2. NoSQL
 
-## RDBMS
+### **RDBMS**
 
 - 먼저 RDBMS에 대해서 살펴보겠다. RDBMS는 `관계형 데이터베이스 관리 시스템`을 의미하는데, 이는 관계형 데이터 모델을 기초로 두고 모든 데이터를 2차원 테이블 형태로 표현하는 DB이다.
 
@@ -30,7 +30,7 @@ DB는 크게 2종류로 나눌 수 있다.
 
 - 이 `외래 키`를 이용하여 테이블 간 Join이 가능하다는 것이 RDBMS의 가장 큰 특징이다.
 
-## NoSQL
+### **NoSQL**
 
 - NoSQL이란 Not Only SQL의 약자로 테이블 간 관계를 정의하지 않는 방식의 데이터 저장 기술을 사용한다.
 
@@ -38,7 +38,7 @@ DB는 크게 2종류로 나눌 수 있다.
 
 - NoSQL은 기술의 발전으로 인한 데이터와 트래픽이 기하급수적으로 증가함에 따라 RDBMS의 단점인 `성능을 향상시키기 위해서는 장비를 업그레이드해야 하는 Scale-Up의 특징`이 비용을 기하급수적으로 증가시키기 때문에 데이터 일관성은 포기하되 비용을 고려하여 `여러 대의 서버에 데이터를 분산하여 저장`하는 Scale-Out을 목표로 등장했다.
 
-### 1. Key-Value DB
+#### **1. Key-Value DB**
 
 - Key-Value DB는 데이터가 Key와 Value의 쌍으로 저장된다.
 
@@ -48,7 +48,7 @@ DB는 크게 2종류로 나눌 수 있다.
 
 ex) Redis, Riak, Amazon Dynamo DB 등
 
-### 2. Document DB
+#### **2. Document DB**
 
 - Document DB는 언뜻 보기엔 Key-Value DB와 비슷하지만, Value 대신 계층적인 형태인 Document가 저장된다.
 
@@ -60,7 +60,7 @@ ex) Redis, Riak, Amazon Dynamo DB 등
 
 ex) MongoDB, CouthDB 등
 
-### 3. Wide Column DB
+#### **3. Wide Column DB**
 
 - 이전의 모델들이 Key-Value 값을 이용해 필드를 결정했다면, 이 모델은 키에서 필드를 결정한다.
 
@@ -72,7 +72,7 @@ ex) MongoDB, CouthDB 등
 
 ex) HBase, Hypertable 등
 
-### 4. Graph Database
+#### **4. Graph Database**
 
 - 데이터를 Node와 Edge, Property와 함께 그래프 구조를 사용하여 데이터를 표현하고 저장한다.
 
@@ -82,9 +82,9 @@ ex) HBase, Hypertable 등
 
 ex) Neo4J
 
-## RDBMS와 NoSQL의 장단점
+### **RDBMS와 NoSQL의 장단점**
 
-### RDBMS
+#### **RDBMS**
 
 장점
 
@@ -97,7 +97,7 @@ ex) Neo4J
 - 성능 향상을 위해서는 서버의 성능을 향상시켜야 하는 Scale-Up만을 지원
 - 스키마로 인한 유연하지 못한 데이터
 
-### NoSQL
+#### **NoSQL**
 
 장점
 
@@ -109,7 +109,7 @@ ex) Neo4J
 - 데이터 중복 가능
 - 불명확한 데이터 구조
 
-## 그래서 뭘 사용해야 되는데?
+### **그래서 뭘 사용해야 되는데?**
 
 - RDBMS는 데이터 구조가 명확하며 변경될 여지가 없으며, 명확한 스키마가 포인트인 경우 사용하는 것이 바람직하다. 또한 중복 데이터가 없어 변경이 용이하기 때문에 관계를 맺고 있는 데이터가 자주 변경이 이루어지는 시스템에 적합하다.
 
