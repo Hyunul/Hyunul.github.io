@@ -1,14 +1,14 @@
 ---
 title: "[Blog] 깃허브 블로그의 방문자 수를 구해보자."
 date: 2024-07-03 07:28:22 +09:00
-categories: [Tech, Blog]
-tag: [Blog]
+categories: [Tip]
+tag: [Blog, GA]
 ---
 
 Github Pages 기반으로 운영되는 블로그들은 Tistory나 Velog처럼 방문자 수 통계가 제공되지 않는다.  
 따라서 이 글을 통해 Google Analytics (이하 "GA")를 Github 블로그에 연동시켜 방문자 수 통계 기능을 추가할 것이다.
 
-## **🛠 설정 방법 🛠**
+## **설정 방법**
 
 > 진짜 별거 없는데 빠르게 설명해주겠다.
 

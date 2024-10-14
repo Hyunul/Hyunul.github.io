@@ -1,7 +1,7 @@
 ---
 title: "[Git] LeetCode의 문제를 내 Repo에 자동으로 커밋되도록 만들어보자."
 date: 2024-07-02 17:47:14 +09:00
-categories: [Tech, Git]
+categories: [Tip]
 tag: [Git]
 ---
 

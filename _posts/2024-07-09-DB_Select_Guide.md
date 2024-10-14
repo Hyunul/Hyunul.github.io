@@ -1,8 +1,8 @@
 ---
 title: "[DB] DB 선택 가이드"
 date: 2024-07-09 09:18:58 +09:00
-categories: [Tech, Web]
-tag: [DB]
+categories: [Tip]
+tag: [DB, BE]
 ---
 
 ## **서론**

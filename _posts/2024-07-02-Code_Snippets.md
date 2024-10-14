@@ -1,7 +1,7 @@
 ---
 title: "[Blog] Code Snippets를 사용하여 default 템플릿을 만들어보자."
 date: 2024-07-02 10:20:57 +09:00
-categories: [Tech, Blog]
+categories: [Tip]
 tag: [Blog]
 ---
 

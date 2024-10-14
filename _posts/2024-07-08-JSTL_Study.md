@@ -1,8 +1,8 @@
 ---
 title: "[JSTL] JSTL 사용 이유, 기초 문법"
 date: 2024-07-08 16:13:45 +09:00
-categories: [Tech, Web]
-tag: [Spring]
+categories: [Tip]
+tag: [JSTL, Web, FE]
 ---
 
 ## **JSTL이란?**

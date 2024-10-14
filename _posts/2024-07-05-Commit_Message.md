@@ -1,7 +1,7 @@
 ---
 title: "[Git] 좋은 Commit message 작성법"
 date: 2024-07-05 07:27:29 +09:00
-categories: [Tech, Git]
+categories: [Tip]
 tag: [Git]
 ---
 
