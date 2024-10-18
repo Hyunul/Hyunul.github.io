@@ -1,5 +1,5 @@
 ---
-title: "[Error] JSP 파일을 못 읽을 때"
+title: "[Error] JSP 파일을 못 읽을 때 (Error resolving template)"
 date: 2024-07-10 09:15:46 +09:00
 categories: [Error]
 tag: [Spring, Error]

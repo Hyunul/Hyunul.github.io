@@ -1,5 +1,5 @@
 ---
-title:
+title: "[Spring] Java Doc 생성 오류 (error: unmappable character for encoding MS949)"
 date: 2024-10-18 16:16:59 +09:00
 categories: [Error]
 tag: [Spring]
@@ -28,5 +28,9 @@ tag: [Spring]
 
 누가봐도 인코딩 에러다. 해결 시작하자.  
 Java_Doc을 생성하기 위해 Export를 진행하다 보면 다음과 같은 창이 뜨는데, 해결 방법은 정말 간단하다.  
-VM options에 다음 명령어를 기입하고 Finish를 누르면 간단히 해결.  
+VM options에 다음 명령어를 기입하고 Finish를 누르면 간단히 해결.
+
+<div align="left">
+    <img src="./assets/images/Java_Doc_Err/JDE_02.png" alt="JDE_02">  
+</div>
 `-charset UTF-8 -encoding UTF-8`
