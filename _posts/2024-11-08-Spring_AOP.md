@@ -43,7 +43,7 @@ public class HelloServiceImpl implements HelloService {
 AOP는 핵심적인 기능에서 부가적인 기능을 분리하여 `Aspect`라는 모듈 형태로 만들어서 설계하고 개발하는 방법
 
 <div align="left">
-    <img src="./assets/images/AOP/aop_ex01.png">  
+    <img src="./assets/images/AOP/aop_ex01.png" alt="aop_ex01">  
 </div>
 
 ### Aspect란?
