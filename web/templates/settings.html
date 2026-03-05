@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>LLM 설정</h2>
+  <form action="{{ url_for('settings') }}" method="post">
+    <label for="provider">Provider</label>
+    <select id="provider" name="provider">
+      <option value="GEMINI" {% if settings.normalized_provider() == "GEMINI" %}selected{% endif %}>GEMINI</option>
+      <option value="OPENAI" {% if settings.normalized_provider() == "OPENAI" %}selected{% endif %}>OPENAI</option>
+    </select>
+
+    <label for="model">Model</label>
+    <input id="model" name="model" type="text" value="{{ settings.model }}" placeholder="예: gemini-2.0-flash">
+
+    <label for="api_key">API Key</label>
+    <input id="api_key" name="api_key" type="password" value="{{ settings.api_key }}" placeholder="API 키 입력">
+
+    <button type="submit">저장</button>
+  </form>
+</section>
+{% endblock %}

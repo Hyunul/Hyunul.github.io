@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>포스트 생성</h2>
+  <form action="{{ url_for('generate') }}" method="post">
+    <label for="keywords">키워드</label>
+    <input id="keywords" name="keywords" type="text" placeholder="예: Flask settings.json 관리" required>
+
+    <label for="category">카테고리</label>
+    <select id="category" name="category">
+      {% for category in categories %}
+      <option value="{{ category }}">{{ category }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="tags">태그 (콤마 구분, 선택)</label>
+    <input id="tags" name="tags" type="text" placeholder="예: Flask, Jekyll, Automation">
+
+    <button type="submit">생성</button>
+  </form>
+</section>
+{% endblock %}

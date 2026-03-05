@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>생성 결과</h2>
+  <form action="{{ url_for('save') }}" method="post">
+    <input type="hidden" name="keywords" value="{{ keywords }}">
+    <input type="hidden" name="category" value="{{ category }}">
+    <input type="hidden" name="tags" value="{{ tags }}">
+
+    <label for="title_slug">파일명 슬러그 (선택)</label>
+    <input id="title_slug" name="title_slug" type="text" placeholder="예: flask-ai-blog-generator">
+
+    <label for="content">Markdown</label>
+    <textarea id="content" name="content" rows="28">{{ content }}</textarea>
+
+    <div class="actions">
+      <button type="submit">저장 + Commit + Push</button>
+      <a class="ghost" href="{{ url_for('index') }}">다시 생성</a>
+    </div>
+  </form>
+</section>
+{% endblock %}
