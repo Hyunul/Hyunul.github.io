@@ -1,53 +1,55 @@
 ---
-title: "[Git] LeetCode의 문제를 내 Repo에 자동으로 커밋되도록 만들어보자."
+title: "[Git] LeetHub로 LeetCode 풀이를 GitHub에 자동 저장하기"
 date: 2024-07-02 17:47:14 +09:00
 categories: [Tip]
-tag: [Git]
+tag: [Git, GitHub, LeetCode, LeetHub]
 ---
 
-"코테 준비해야지..." 대학생때부터 가져온 생각이다..  
-이전에 코테 준비할 때에는 백준으로 많이 준비했었는데 요즘은 주변에서 LeetCode를 선호하는 추세라고 많이 들려온다.  
-그래서 "LeetHub"를 준비했다. 이 친구는 LeetCode의 문제를 성공적으로 풀어낸다면 나의 깃헙 Repo에 풀이를 커밋해준다. 완전 럭키비키하자너..
+"코테 준비해야지..."라는 생각은 대학생 때부터 늘 하고 있었다.
+예전에는 백준으로 많이 연습했지만, 요즘은 주변에서 LeetCode를 더 자주 추천하는 분위기였다.
+그래서 찾아본 것이 `LeetHub`였다. 이 확장 프로그램은 LeetCode 문제를 제출했을 때 풀이를 내 GitHub 레포지토리에 자동으로 커밋해준다.
 
-## **🛠 설정 방법 🛠**
+## 설정 방법
 
-### **1. 확장 프로그램 추가**
+### 1. 확장 프로그램 추가
 
-먼저 크롬 웹 스토어로 가서 LeetHub V3를 추가해준다.
+먼저 크롬 웹 스토어에서 `LeetHub V3`를 설치한다.
 
 <div align="left">
-    <img src="./assets/images/LeetHub/LeetHub_01.png" alt="LeetHub_01">  
+    <img src="./assets/images/LeetHub/LeetHub_01.png" alt="LeetHub_01">
 </div>
 
-추가하고 크롬의 오른쪽 상단에 있는 확장 프로그램 버튼을 누르면 다음과 같은 창이 뜬다.
+설치 후 크롬 오른쪽 상단의 확장 프로그램 버튼을 누르면 아래와 같은 창이 뜬다.
 
 <div align="left">
-    <img src="./assets/images/LeetHub/LeetHub_02.png" alt="LeetHub_02">  
+    <img src="./assets/images/LeetHub/LeetHub_02.png" alt="LeetHub_02">
 </div>
 
-### **2. Github 인증**
+### 2. GitHub 인증
 
-한번 더 클릭하면 다음 창으로 넘어가는데 "Authenticate"를 눌러 진행해주자.
+한 번 더 클릭하면 다음 화면으로 넘어가는데, 여기서 `Authenticate`를 눌러 인증을 진행한다.
 
 <div align="left">
-    <img src="./assets/images/LeetHub/LeetHub_03.png" alt="LeetHub_03">  
+    <img src="./assets/images/LeetHub/LeetHub_03.png" alt="LeetHub_03">
 </div>
 
-### **3. Github Repo 설정**
+### 3. GitHub Repo 설정
 
-로그인 완료 시 다음과 같은 창이 나타나는데, 첫 칸은 "Create a new Private Reppository" (새로운 Private Repo를 만들어서 그 곳에 커밋하겠다는 의미)를 선택해주고, 두번째 칸은 본인이 원하는 Repo 명을 적어주고 "Get Started"를 누르면 설정 끝이다.
+로그인이 끝나면 설정 화면이 나타난다.
+첫 번째 항목에서는 `Create a new Private Repository`를 선택하고, 두 번째 항목에는 원하는 레포지토리 이름을 입력한 뒤 `Get Started`를 누르면 된다.
 
 <div align="left">
-    <img src="./assets/images/LeetHub/LeetHub_04.png" alt="LeetHub_04">  
+    <img src="./assets/images/LeetHub/LeetHub_04.png" alt="LeetHub_04">
 </div>
 
-자 이제 정상적으로 작동하는지 보도록 하자.
+이제 정상적으로 동작하는지 확인해보자.
 
-문제를 풀고, 제출 옆에 있는 Push를 누르자 생성된 Repo에 자동으로 커밋되는 것을 볼 수 있다.
+문제를 풀고 제출 옆의 `Push` 버튼을 누르면, 방금 만든 Repo에 풀이가 자동으로 커밋되는 것을 볼 수 있다.
 
 <div align="left">
-    <img src="./assets/images/LeetHub/LeetHub_05.png" alt="LeetHub_05">  
+    <img src="./assets/images/LeetHub/LeetHub_05.png" alt="LeetHub_05">
 </div><br>
 
-근데... LeetCode... 엄청 어렵다... 백준의 Easy와 LeetCode의 Easy는... 생각보다 차이가 많이 나서 당황스러웠다..
-공부 많이 해야겠네 😅
+막상 해보니 LeetCode는 생각보다 훨씬 어려웠다.
+특히 백준의 Easy와 LeetCode의 Easy는 체감 난이도가 꽤 달랐다.
+결국 도구보다 중요한 건 꾸준히 푸는 습관인 것 같다.

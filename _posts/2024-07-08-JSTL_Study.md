@@ -1,55 +1,58 @@
 ---
-title: "[JSTL] JSTL 사용 이유, 기초 문법"
+title: "[JSTL] JSTL이 필요한 이유와 기본 태그 문법"
 date: 2024-07-08 16:13:45 +09:00
 categories: [Tip]
-tag: [JSTL, Web, FE]
+tag: [JSTL, JSP, View]
 ---
 
-## **JSTL이란?**
+## JSTL이란?
 
-**JSTL** 이란 **JavaServer Pages Standard Tag Library** 의 약어로, `Java 코드를 바로 사용하지 않고 HTML 태그 형태로 직관적인 코딩을 지원`하는 라이브러리이다.  
-일반적으로 HTML 태그만으로는 Java의 forEach 문과 같은 반복문을 사용할 수 없는데, JSTL 라이브러리를 사용한다면 HTML 태그 안에 직관적으로 쓰임새가 파악되는 반복문을 작성할 수 있게 된다.
+**JSTL**은 **JavaServer Pages Standard Tag Library**의 약자로, JSP에서 자바 코드를 직접 섞기보다 HTML에 가까운 태그 형태로 로직을 표현하도록 돕는 라이브러리다.
+HTML만으로는 반복문이나 조건문을 표현하기 어렵지만, JSTL을 사용하면 태그 기반으로 보다 읽기 쉬운 JSP를 작성할 수 있다.
 
-## **왜 사용하나요?**
+## 왜 사용할까?
 
-흔히 사용하는 JSP는 HTML코드와 스크립트 코드가 섞이기에 `코드의 가독성`이 떨어진다. 반면에 JSTL을 사용하면 프로그래밍을 입문한 사람이라면 코드의 쓰임새를 직관적으로 이해할 수 있다는 장점이 있다.  
-이로 인해 개발자가 아닌 HTML/CSS를 다루는 디자이너가 `간단한 코드 작업을 쉽게 수행하는 데 효과적` 이다.
+JSP는 HTML과 스크립트 코드가 뒤섞이기 쉬워서 가독성이 떨어지기 쉽다.
+반면 JSTL을 사용하면 반복, 조건, 출력 같은 로직을 태그로 분리할 수 있어 구조가 더 명확해진다.
+그래서 협업하거나 유지보수할 때 특히 유리하다.
 
-## **기본 문법**
+## 기본 문법
 
-> - `c:` // 코어
-> - `fmt:` // 포멧팅
-> - `fn:` // 함수
-> - `sql:` // 데이터베이스
-> - `x:` // XML 처리
-
----
-
-> - `c:url` // url 호출
-> - `c:out` // 객체를 화면에 출력
-> - `c:set` // 저장 영역에 객체를 저장
-> - `c:forEach` // 반복문 제어
-> - `c:remove` // 저장 영역에 객체를 삭제
-> - `c:if` // 조건문 제어
-> - `c:choose`, `c:when`, `c:otherewise` : 복합조건문 제어
-> - `c:import!` : 다른 jsp화면을 현재 화면에 출력
-> - `c:redirect` : 경로 이동
+- `c:`: core
+- `fmt:`: formatting
+- `fn:`: function
+- `sql:`: database
+- `x:`: XML 처리
 
 ---
 
-## forEach 사용 예시 (with. status)
+## 자주 사용하는 태그
 
-`Ex) items = [0,1,2,3,4,5]`
+- `c:url`: URL 생성
+- `c:out`: 값을 화면에 출력
+- `c:set`: 값을 저장
+- `c:forEach`: 반복문 제어
+- `c:remove`: 저장된 값 제거
+- `c:if`: 조건문 제어
+- `c:choose`, `c:when`, `c:otherwise`: 복합 조건문 처리
+- `c:import`: 다른 JSP 또는 리소스를 현재 화면에 포함
+- `c:redirect`: 경로 이동
 
-```
-<c:foreach items=”${items}” var=”item” varStatus=”status”>
-    ${status.current}<br/>      <!– 현재 아이템 –>
-    ${status.index}<br/>         0,1,2,3,4,5
-    ${status.count}<br/>        1,2,3,4,5,6
-    ${status.first}<br/>           index == 0일 때 true
-    ${status.last}<br/>           index == 5일 때 true
-    ${status.begin}<br/>        <!– 시작값 –>
-    ${status.end}<br/>          <!– 끝값 –>
-    ${status.step}<br/>         <!– 증가값 –>
-< /c:forEach>
+---
+
+## `forEach` 사용 예시 (`varStatus`)
+
+`Ex) items = [0, 1, 2, 3, 4, 5]`
+
+```jsp
+<c:forEach items="${items}" var="item" varStatus="status">
+    ${status.current}<br/> <!-- 현재 아이템 -->
+    ${status.index}<br/> <!-- 0, 1, 2, 3, 4, 5 -->
+    ${status.count}<br/> <!-- 1, 2, 3, 4, 5, 6 -->
+    ${status.first}<br/> <!-- index == 0 일 때 true -->
+    ${status.last}<br/> <!-- index == 5 일 때 true -->
+    ${status.begin}<br/> <!-- 시작값 -->
+    ${status.end}<br/> <!-- 끝값 -->
+    ${status.step}<br/> <!-- 증가값 -->
+</c:forEach>
 ```
