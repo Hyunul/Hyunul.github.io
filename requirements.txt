@@ -1,3 +1,6 @@
 flask
 openai
 google-generativeai
+requests
+beautifulsoup4
+markdownify
