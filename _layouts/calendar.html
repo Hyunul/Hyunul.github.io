@@ -28,9 +28,11 @@ layout: page
   html[data-mode="dark"] .cal-cell[data-level="4"] { background: #39d353; }
   .cal-legend { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-muted-color); margin-top: 0.5rem; }
   .cal-legend .cal-cell { width: 12px; height: 12px; }
-  .cal-tip { position: fixed; z-index: 50; background: var(--card-bg, #fff); color: var(--text-color); border: 1px solid var(--border-color, rgba(128,128,128,0.3)); border-radius: 6px; padding: 0.5rem 0.7rem; font-size: 0.82rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12); pointer-events: none; max-width: 280px; display: none; }
+  .cal-tip { position: fixed; z-index: 50; background: var(--card-bg, #fff); color: var(--text-color); border: 1px solid var(--border-color, rgba(128,128,128,0.3)); border-radius: 6px; padding: 0.5rem 0.7rem; font-size: 0.82rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12); max-width: 280px; display: none; }
   .cal-tip .cal-tip-date { font-weight: 600; margin-bottom: 0.25rem; }
   .cal-tip ul { list-style: disc; padding-left: 1.1rem; margin: 0; }
+  .cal-tip a { color: var(--link-color, #2a7ae2); text-decoration: none; }
+  .cal-tip a:hover { text-decoration: underline; }
 </style>
 
 <div id="calendar-heatmap" class="pl-xl-3">Loading calendar…</div>
@@ -154,10 +156,9 @@ layout: page
             cell.setAttribute('data-level', Math.min(4, posts.length));
             cell.setAttribute('data-date', iso);
             cell.addEventListener('mouseenter', function (e) { showTip(e.currentTarget, iso, posts); });
-            cell.addEventListener('mouseleave', hideTip);
+            cell.addEventListener('mouseleave', scheduleHide);
             cell.addEventListener('click', function () {
               if (posts.length === 1) window.location.href = posts[0].url;
-              else window.location.href = posts[0].url;
             });
           } else {
             cell.setAttribute('data-level', 0);
@@ -195,7 +196,10 @@ layout: page
     return y + '-' + m + '-' + day;
   }
 
+  var hideTimer = null;
+
   function showTip(cell, iso, posts) {
+    cancelHide();
     var html = '<div class="cal-tip-date">' + iso + ' · ' + posts.length + ' post' + (posts.length > 1 ? 's' : '') + '</div>';
     html += '<ul>';
     posts.forEach(function (p) {
@@ -221,5 +225,17 @@ layout: page
     tip.style.display = 'none';
     tip.setAttribute('aria-hidden', 'true');
   }
+
+  function scheduleHide() {
+    cancelHide();
+    hideTimer = setTimeout(hideTip, 180);
+  }
+
+  function cancelHide() {
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+  }
+
+  tip.addEventListener('mouseenter', cancelHide);
+  tip.addEventListener('mouseleave', scheduleHide);
 })();
 </script>
