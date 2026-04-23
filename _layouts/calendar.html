@@ -104,7 +104,7 @@ layout: page
 
     var start = new Date(year, 0, 1);
     var cursor = new Date(year, 0, 1);
-    cursor.setDate(cursor.getDate() - start.getDay()); // back to Sunday
+    cursor.setDate(cursor.getDate() - start.getDay()); /* back to Sunday */
     var weeks = [];
     while (cursor.getFullYear() < year || cursor.getMonth() <= 11) {
       var week = [];
@@ -206,7 +206,7 @@ layout: page
       var a = document.createElement('a');
       a.href = p.url;
       a.textContent = p.title;
-      html += '<li>' + a.outerHTML + '</li>';
+      html += '<li>' + a.outerHTML + '</' + 'li>';
     });
     html += '</ul>';
     tip.innerHTML = html;
