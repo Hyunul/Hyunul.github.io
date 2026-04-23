@@ -44,6 +44,10 @@ Writes to `_posts/` and skips titles that already exist (see `load_existing_titl
 
 ## Architecture
 
+### Blog posting workflow
+
+When a task involves creating, generating, or migrating a post into `_posts/` (including automated/routine posting runs like "자동 포스팅 N개"), invoke the **`blog-posting`** skill at `.claude/skills/blog-posting/SKILL.md` before writing the file. The skill encodes the Front Matter contract, required section order, filename rules, and category/tag conventions that must be satisfied for `BlogPostGenerator.validate` to accept the post. Do not draft posts from memory — the `tag` (singular) vs `tags` (plural) trap and the required `## 서론 / ## 본론 / ## 정리 / ## Reference` layout are the most common defect sources.
+
 ### Post authoring contract (strictly enforced)
 
 Both the LLM generator and the Tistory crawler produce posts that must conform to the rules documented in [2026-03-05-Blog_Post_Format_Guide.md](2026-03-05-Blog_Post_Format_Guide.md). Key invariants that `BlogPostGenerator.validate` checks (`blog_generator/generator.py`):
