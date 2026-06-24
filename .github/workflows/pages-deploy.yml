@@ -56,6 +56,36 @@ jobs:
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
+      - name: Encrypt password-protected posts
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.POST_PASSWORD }}
+        run: |
+          base="_site${{ steps.pages.outputs.base_path }}"
+          list="$base/staticrypt-targets.txt"
+          targets=$(grep -v '^[[:space:]]*$' "$list" 2>/dev/null || true)
+          if [ -z "$targets" ]; then
+            echo "No posts marked 'encrypted: true'; skipping encryption."
+            rm -f "$list"
+            exit 0
+          fi
+          if [ -z "$STATICRYPT_PASSWORD" ]; then
+            echo "::error::Found posts marked 'encrypted: true' but the POST_PASSWORD secret is not set."
+            exit 1
+          fi
+          npm install -g staticrypt
+          echo "$targets" | while IFS= read -r url; do
+            url=$(echo "$url" | tr -d '[:space:]')
+            [ -z "$url" ] && continue
+            file="${base}${url}index.html"
+            if [ -f "$file" ]; then
+              echo "Encrypting $file"
+              staticrypt "$file" -d "$(dirname "$file")" --short
+            else
+              echo "::warning::Encrypted target not found: $file"
+            fi
+          done
+          rm -f "$list"
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

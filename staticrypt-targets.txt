@@ -1,0 +1,7 @@
+---
+permalink: /staticrypt-targets.txt
+layout: null
+sitemap: false
+---
+{% for post in site.posts %}{% if post.encrypted %}{{ post.url }}
+{% endif %}{% endfor %}
