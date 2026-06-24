@@ -1,6 +1,6 @@
 ---
 title: "비밀 테스트 글"
-date: 2026-06-24 14:30:00 +09:00
+date: 2026-06-24 09:00:00 +09:00
 categories: [test]
 tags: [private]
 encrypted: true
