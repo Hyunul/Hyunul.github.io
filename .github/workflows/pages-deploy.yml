@@ -79,7 +79,7 @@ jobs:
             file="${base}${url}index.html"
             if [ -f "$file" ]; then
               echo "Encrypting $file"
-              staticrypt "$file" -d "$(dirname "$file")" --short
+              staticrypt "$file" -d "$(dirname "$file")" --short -t tools/staticrypt-prompt-template.html
             else
               echo "::warning::Encrypted target not found: $file"
             fi

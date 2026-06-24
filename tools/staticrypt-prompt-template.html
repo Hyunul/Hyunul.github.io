@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko" class="staticrypt-html">
+    <head>
+        <meta charset="utf-8" />
+        <title>비밀글</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- do not cache this page -->
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <style>
+            :root {
+                --sc-bg: #f6f8fa;
+                --sc-card: #ffffff;
+                --sc-text: #1f2328;
+                --sc-muted: #656d76;
+                --sc-border: #d0d7de;
+                --sc-primary: #0969da;
+                --sc-primary-hover: #0860ca;
+                --sc-primary-soft: rgba(9, 105, 218, 0.12);
+                --sc-primary-ring: rgba(9, 105, 218, 0.3);
+                --sc-error: #cf222e;
+                --sc-shadow: 0 8px 30px rgba(31, 35, 40, 0.12);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --sc-bg: #0d1117;
+                    --sc-card: #161b22;
+                    --sc-text: #e6edf3;
+                    --sc-muted: #8b949e;
+                    --sc-border: #30363d;
+                    --sc-primary: #2f81f7;
+                    --sc-primary-hover: #4493f8;
+                    --sc-primary-soft: rgba(47, 129, 247, 0.15);
+                    --sc-primary-ring: rgba(47, 129, 247, 0.35);
+                    --sc-error: #f85149;
+                    --sc-shadow: 0 8px 30px rgba(1, 4, 9, 0.6);
+                }
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                    "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
+                background: var(--sc-bg);
+                color: var(--sc-text);
+            }
+            .sc-card {
+                width: min(92vw, 380px);
+                background: var(--sc-card);
+                border: 1px solid var(--sc-border);
+                border-radius: 16px;
+                box-shadow: var(--sc-shadow);
+                padding: 40px 32px 32px;
+                text-align: center;
+                animation: sc-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+            @keyframes sc-pop {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px) scale(0.98);
+                }
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            .sc-icon {
+                width: 56px;
+                height: 56px;
+                margin: 0 auto 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: var(--sc-primary-soft);
+                color: var(--sc-primary);
+            }
+            .sc-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin: 0 0 8px;
+            }
+            .sc-sub {
+                font-size: 0.9rem;
+                line-height: 1.55;
+                color: var(--sc-muted);
+                margin: 0 0 24px;
+            }
+            .sc-input {
+                width: 100%;
+                padding: 13px 14px;
+                font-size: 15px;
+                color: var(--sc-text);
+                background: var(--sc-bg);
+                border: 1px solid var(--sc-border);
+                border-radius: 10px;
+                outline: none;
+                transition: border-color 0.15s, box-shadow 0.15s;
+            }
+            .sc-input::placeholder {
+                color: var(--sc-muted);
+            }
+            .sc-input:focus {
+                border-color: var(--sc-primary);
+                box-shadow: 0 0 0 3px var(--sc-primary-ring);
+            }
+            .sc-btn {
+                width: 100%;
+                margin-top: 12px;
+                padding: 13px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #fff;
+                background: var(--sc-primary);
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background 0.15s;
+            }
+            .sc-btn:hover {
+                background: var(--sc-primary-hover);
+            }
+            .sc-error {
+                min-height: 1.3em;
+                margin-top: 14px;
+                font-size: 0.85rem;
+                color: var(--sc-error);
+            }
+            .sc-shake {
+                animation: sc-shake 0.4s;
+            }
+            @keyframes sc-shake {
+                10%,
+                90% {
+                    transform: translateX(-1px);
+                }
+                20%,
+                80% {
+                    transform: translateX(2px);
+                }
+                30%,
+                50%,
+                70% {
+                    transform: translateX(-5px);
+                }
+                40%,
+                60% {
+                    transform: translateX(5px);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="sc-card" id="sc-card">
+            <div class="sc-icon">
+                <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            <h1 class="sc-title">잠긴 글</h1>
+            <p class="sc-sub">비밀번호로 보호된 글입니다.<br />열람하려면 비밀번호를 입력하세요.</p>
+
+            <form id="staticrypt-form">
+                <input
+                    id="staticrypt-password"
+                    class="sc-input"
+                    type="password"
+                    placeholder="비밀번호"
+                    autocomplete="current-password"
+                    autofocus
+                />
+                <button type="submit" class="sc-btn">잠금 해제</button>
+                <div class="sc-error" id="sc-error"></div>
+            </form>
+        </div>
+
+        <script>
+            // staticrypt 가 채워 넣는 변수들 (형식: '/*[|variable|]*/0')
+            const staticryptInitiator = /*[|js_staticrypt|]*/ 0;
+            const staticryptConfig = /*[|staticrypt_config|]*/ 0;
+
+            const templateConfig = {
+                rememberExpirationKey: "staticrypt_expiration",
+                rememberPassphraseKey: "staticrypt_passphrase",
+                replaceHtmlCallback: null,
+                clearLocalStorageCallback: null,
+            };
+
+            const staticrypt = staticryptInitiator.init(staticryptConfig, templateConfig);
+
+            // 자동 복호화(remember) 비활성화 — 접근할 때마다 비밀번호를 요구
+            window.onload = function () {
+                document.getElementById("staticrypt-password").focus();
+            };
+
+            // 폼 제출 → 입력 비번으로 실제 복호화 (성공 시 staticrypt 가 페이지를 원문으로 교체)
+            document.getElementById("staticrypt-form").addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const password = document.getElementById("staticrypt-password").value;
+                const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, false);
+
+                if (!isSuccessful) {
+                    const card = document.getElementById("sc-card");
+                    document.getElementById("sc-error").textContent = "비밀번호가 올바르지 않습니다.";
+                    card.classList.remove("sc-shake");
+                    void card.offsetWidth; // 애니메이션 재시작용 reflow
+                    card.classList.add("sc-shake");
+                    document.getElementById("staticrypt-password").select();
+                }
+            });
+        </script>
+    </body>
+</html>

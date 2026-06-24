@@ -14,3 +14,6 @@ Gemfile.lock
 
 # staticrypt salt (regenerated on each CI run; must not be committed)
 .staticrypt.json
+
+# Claude Code local preview server config
+.claude/launch.json
